@@ -7,7 +7,6 @@ public class Slot : MonoBehaviour
     public GameObject objectIn;
     void Start()
     {
-        Debug.Log(transform.childCount > 0);
         if (transform.childCount > 0)
         {
             objectIn = transform.GetChild(0).gameObject;
@@ -19,5 +18,12 @@ public class Slot : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SetObjToSlot()
+    {
+        objectIn = transform.GetChild(0).gameObject;
+        objectIn.transform.position = transform.position;
+        objectIn.GetComponent<UIObject>().currSlot = this;
     }
 }
