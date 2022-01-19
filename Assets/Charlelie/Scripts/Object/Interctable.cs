@@ -36,7 +36,7 @@ public class Interctable : MonoBehaviour
         if (FindObjectOfType<GameManager>().draggedObject != null)
         {
             GetComponent<SpriteRenderer>().color = Color.green;
-            FindObjectOfType<GameManager>().draggedObject.GetComponent<UIObject>().onInteractable = this;
+            GameManager.instance.draggedObject.GetComponent<UIObject>().onInteractable = this;
         }
     }
 
@@ -45,7 +45,7 @@ public class Interctable : MonoBehaviour
         if (FindObjectOfType<GameManager>().draggedObject != null)
         {
             GetComponent<SpriteRenderer>().color = Color.white;
-            FindObjectOfType<GameManager>().draggedObject.GetComponent<UIObject>().onInteractable = this;
+            GameManager.instance.draggedObject.GetComponent<UIObject>().onInteractable = null;
         }
     }
 

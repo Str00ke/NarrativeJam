@@ -18,18 +18,25 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         {
             transform.position = Input.mousePosition;
         }
+
+        #region mobile
+        if (Input.touchCount == 1)
+        {
+
+        }
+        #endregion
     }
 
     #region PC
     public void OnPointerDown(PointerEventData eventData)
     {
-        FindObjectOfType<GameManager>().draggedObject = gameObject;
+        GameManager.instance.draggedObject = gameObject;
         isDragged = true;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        FindObjectOfType<GameManager>().draggedObject = null;
+        GameManager.instance.draggedObject = null;
         isDragged = false;
         if (GetComponent<UIObject>().onInteractable)
         {
@@ -40,4 +47,9 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     }
 
     #endregion
+
+    private void OnMouseUpAsButton()
+    {
+        
+    }
 }
