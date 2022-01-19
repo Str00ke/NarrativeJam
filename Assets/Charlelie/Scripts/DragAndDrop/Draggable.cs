@@ -30,13 +30,13 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     #region PC
     public void OnPointerDown(PointerEventData eventData)
     {
-        FindObjectOfType<GameManager>().draggedObject = gameObject;
+        GameManager.instance.draggedObject = gameObject;
         isDragged = true;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        FindObjectOfType<GameManager>().draggedObject = null;
+        GameManager.instance.draggedObject = null;
         isDragged = false;
         if (GetComponent<UIObject>().onInteractable)
         {
