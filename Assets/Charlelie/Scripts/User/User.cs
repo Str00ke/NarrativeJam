@@ -39,6 +39,7 @@ public class User : MonoBehaviour
     float deltaVel;
     Vector2 frameVel = Vector2.zero;
     public float camFriction = 0.02f;
+    public float zoomFreeMoverestraints = 100;
 
     Vector2 borders;
 
@@ -143,14 +144,14 @@ public class User : MonoBehaviour
         float vertExtent = cam.orthographicSize;
         float horzExtent = vertExtent * Screen.width / Screen.height;
         //if camera touching border, zero-ing vel
-        Vector2 camPos = cam.transform.position + ((Vector3)frameVel / 100);
+        Vector2 camPos = cam.transform.position + ((Vector3)frameVel / (zoomFreeMoverestraints * -currZoomVal));
 
         if (camPos.x + horzExtent > borders.x) frameVel = Vector2.zero;
         else if (camPos.x - horzExtent < -borders.x) frameVel = Vector2.zero;
         else if (camPos.y + vertExtent > borders.y) frameVel = Vector2.zero;
         else if (camPos.y - vertExtent < -borders.y) frameVel = Vector2.zero;
 
-        if (frameVel != Vector2.zero && Input.touchCount == 0) cam.transform.position += ((Vector3)frameVel / 100);
+        if (frameVel != Vector2.zero && Input.touchCount == 0) cam.transform.position += ((Vector3)frameVel / (zoomFreeMoverestraints * -currZoomVal));
 
         #endregion
         
