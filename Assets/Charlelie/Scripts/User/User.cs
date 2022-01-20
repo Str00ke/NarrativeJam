@@ -40,6 +40,8 @@ public class User : MonoBehaviour
     Vector2 frameVel = Vector2.zero;
     public float camFriction = 0.02f;
 
+    Vector2 borders;
+
     void Start()
     {
         cam = Camera.main;
@@ -47,6 +49,9 @@ public class User : MonoBehaviour
         zoomInMax = maxZoomDezoom;
         if (zoomMoveInverse) zoomMoveInverseVal = -1;
         else zoomMoveInverseVal = 1;
+        float vertExtents = cam.orthographicSize;
+        float horzExtents = vertExtents * Screen.width / Screen.height;
+        borders = new Vector2(horzExtents, vertExtents);
     }
 
 
@@ -97,12 +102,25 @@ public class User : MonoBehaviour
         {
             if (Input.GetTouch(0).phase == TouchPhase.Moved)
             {
-                Vector2 delta = Input.GetTouch(0).deltaPosition;               
-                cam.transform.position += (((Vector3)delta * zoomMoveInverseVal) * zoomMoveSensibility);
+                Vector2 delta = Input.GetTouch(0).deltaPosition;
+                bool good = true;
+                //if camera touching border, zero-ing vel
+                Vector2 camPoss = cam.transform.position + (((Vector3)delta * zoomMoveInverseVal) * zoomMoveSensibility);
+                float vertExtentss = cam.orthographicSize;
+                float horzExtentss = vertExtentss * Screen.width / Screen.height;
+
+                if (camPoss.x + horzExtentss > borders.x) good = false;
+                else if (camPoss.x - horzExtentss < -borders.x) good = false;
+                else if (camPoss.y + vertExtentss > borders.y) good = false;
+                else if (camPoss.y - vertExtentss < -borders.y) good = false;
+
+                if (good) cam.transform.position += (((Vector3)delta * zoomMoveInverseVal) * zoomMoveSensibility);
+
+                #region testPhysics
                 //zoomMoveVel = ((Vector2)cam.transform.position - prevZoomMoveVel)/*.magnitude*/ / Time.deltaTime;
                 //prevZoomMoveVel = transform.position;
                 //distance = Mathf.Sqrt(Mathf.Pow((prevPos.x - pos.x), 2) + Mathf.Pow((prevPos.y - pos.y), 2));
-                pos = cam.transform.position;
+                //pos = cam.transform.position;
                 /*distance = Mathf.Sqrt(((pos.x - prevPos.x) * (pos.x - prevPos.x)) + ((pos.y - prevPos.y) * (pos.y - prevPos.y)));
                 prevPos = pos;
                 prevSpeed = speed;
@@ -115,15 +133,27 @@ public class User : MonoBehaviour
                 //Debug.Log(acceleration);
 
                 //cam.transform.position= pos + velocity * Time.deltaTime + (acceleration * Mathf.Pow(Time.deltaTime, 2) / 2);
+                #endregion
             }
         }
         velocity = ((Vector2)cam.transform.position - prevPos) / Time.deltaTime;
         frameVel = Vector2.Lerp(frameVel, velocity, 0.1f);
         frameVel -= velocity * camFriction;
         prevPos = cam.transform.position;
-        if (frameVel != Vector2.zero) cam.transform.position += ((Vector3)frameVel / 100);
+        float vertExtent = cam.orthographicSize;
+        float horzExtent = vertExtent * Screen.width / Screen.height;
+        //if camera touching border, zero-ing vel
+        Vector2 camPos = cam.transform.position + ((Vector3)frameVel / 100);
+
+        if (camPos.x + horzExtent > borders.x) frameVel = Vector2.zero;
+        else if (camPos.x - horzExtent < -borders.x) frameVel = Vector2.zero;
+        else if (camPos.y + vertExtent > borders.y) frameVel = Vector2.zero;
+        else if (camPos.y - vertExtent < -borders.y) frameVel = Vector2.zero;
+
+        if (frameVel != Vector2.zero && Input.touchCount == 0) cam.transform.position += ((Vector3)frameVel / 100);
 
         #endregion
+        
     }
 
     #region zoom

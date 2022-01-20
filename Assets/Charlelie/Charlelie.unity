@@ -1595,6 +1595,7 @@ MonoBehaviour:
   camZoomSpeed: 1
   zoomMoveSensibility: 0.001
   zoomMoveInverse: 1
+  camFriction: 0.02
 --- !u!4 &1283919269
 Transform:
   m_ObjectHideFlags: 0
