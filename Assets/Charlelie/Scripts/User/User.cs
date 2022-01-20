@@ -28,18 +28,12 @@ public class User : MonoBehaviour
     public float zoomMoveSensibility = 0.001f;
     public bool zoomMoveInverse = true;
     int zoomMoveInverseVal;
-    Vector2 zoomMoveVel;
-    Vector2 prevZoomMoveVel;
 
-    float distance;
-    float speed, prevSpeed;
-    Vector2 pos, prevPos;
-    float acceleration = -2;
-    Vector2 velocity, prevVelocity;
-    float deltaVel;
+    Vector2 prevPos;
+    Vector2 velocity;
     Vector2 frameVel = Vector2.zero;
     public float camFriction = 0.02f;
-    public float zoomFreeMoverestraints = 100;
+    public float zoomFreeMoveRestraints = 100;
 
     Vector2 borders;
 
@@ -144,14 +138,14 @@ public class User : MonoBehaviour
         float vertExtent = cam.orthographicSize;
         float horzExtent = vertExtent * Screen.width / Screen.height;
         //if camera touching border, zero-ing vel
-        Vector2 camPos = cam.transform.position + ((Vector3)frameVel / (zoomFreeMoverestraints * -currZoomVal));
+        Vector2 camPos = cam.transform.position + ((Vector3)frameVel / (zoomFreeMoveRestraints * -currZoomVal));
 
         if (camPos.x + horzExtent > borders.x) frameVel = Vector2.zero;
         else if (camPos.x - horzExtent < -borders.x) frameVel = Vector2.zero;
         else if (camPos.y + vertExtent > borders.y) frameVel = Vector2.zero;
         else if (camPos.y - vertExtent < -borders.y) frameVel = Vector2.zero;
 
-        if (frameVel != Vector2.zero && Input.touchCount == 0) cam.transform.position += ((Vector3)frameVel / (zoomFreeMoverestraints * -currZoomVal));
+        if (frameVel != Vector2.zero && Input.touchCount == 0) cam.transform.position += ((Vector3)frameVel / (zoomFreeMoveRestraints * -currZoomVal));
 
         #endregion
         

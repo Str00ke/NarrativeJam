@@ -1,24 +1,66 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InventoryManager : MonoBehaviour
 {
+
+    #region instance
+    private static InventoryManager _instance;
+
+    public static InventoryManager instance
+    {
+        get { return GetInstance(); }
+    }
+
+    static InventoryManager GetInstance()
+    {
+        if (_instance == null)
+        {
+            _instance = new InventoryManager();
+        }
+        return _instance;
+    }
+
+    private void Awake()
+    {
+        _instance = this;
+    }
+
+    #endregion
+
+
+    public delegate void OnUp();
+    public OnUp _delegate;
+
     public Slot[] slots;
     public GameObject objPrefab;
-    bool showIn = false;
+    [HideInInspector]
+    public bool showIn = false;
     public GameObject bagBtn;
     public GameObject invGo;
 
     public float bagYMin, bagYMax;
     public float invYMin, invYMax;
+    Vector2 invDown;
+    [HideInInspector]
+    public Vector2 invUp;
+
+    Vector2 bagDown;
+    Vector2 bagUp;
     bool isTravellingDone = true;
     public float speed;
 
+    public AnimationCurve animEase;
+
     private void Start()
     {
-        bagBtn.transform.localPosition = new Vector3(914, bagYMin, 0);
-        invGo.transform.localPosition = new Vector3(455, invYMin, 0);
+
+        invUp = Vector2.right;
+        invDown = Vector2.one;
+        invGo.GetComponent<RectTransform>().pivot = invDown;
+        bagBtn.GetComponent<RectTransform>().pivot = invDown;
     }
 
     public void AddObject()
@@ -35,34 +77,53 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public Slot GetEmptySlot()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].objectIn == null)
+            {
+                return slots[i];
+            }
+        }
+        return null;
+    }
+
+    public void test(System.Action<bool> done)
+    {
+        //if (UpdateInventory()) done(true);
+        //done(UpdateInventory());
+    }
+
     public void UpdateInventory()
     {
         if (!isTravellingDone) return;
         showIn = !showIn;
         if (showIn)
-            StartCoroutine(Move(bagYMin, bagYMax, invYMin, invYMax));
+            StartCoroutine(Move(invDown, invUp));
         else
-            StartCoroutine(Move(bagYMax, bagYMin, invYMax, invYMin));
+            StartCoroutine(Move(invUp, invDown));
     }
 
-    IEnumerator Move(float start, float end, float istart, float iend)
+    IEnumerator Move(Vector2 istart, Vector2 iend)
     {
         isTravellingDone = false;
         float t = 0;
 
-        Vector3 s = new Vector3(914, start, 0);
-        Vector3 e = new Vector3(914, end, 0);
-
-        Vector3 iS = new Vector3(455, istart, 0);
-        Vector3 iE = new Vector3(455, iend, 0);
+        RectTransform invRect = invGo.GetComponent<RectTransform>();
+        RectTransform bagRect = bagBtn.GetComponent<RectTransform>();
         while (t < 1)
         {
-            bagBtn.transform.localPosition = Vector3.Lerp(s, e, t); 
-            invGo.transform.localPosition = Vector3.Lerp(iS, iE, t); 
-            t += Time.deltaTime * speed;
+            invRect.pivot = Vector3.Lerp(istart, iend, t);
+            bagRect.pivot = Vector3.Lerp(istart, iend, t); 
+            t += Time.deltaTime * speed * (1 - animEase.Evaluate(t));
             yield return null;
         }
+        invRect.pivot = iend;
+        bagRect.pivot = iend;
         isTravellingDone = true;
+        if (istart == invDown && _delegate != null)
+            _delegate();
         yield return null;
     }
 }
