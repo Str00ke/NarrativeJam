@@ -28,6 +28,17 @@ public class User : MonoBehaviour
     public float zoomMoveSensibility = 0.001f;
     public bool zoomMoveInverse = true;
     int zoomMoveInverseVal;
+    Vector2 zoomMoveVel;
+    Vector2 prevZoomMoveVel;
+
+    float distance;
+    float speed, prevSpeed;
+    Vector2 pos, prevPos;
+    float acceleration = -2;
+    Vector2 velocity, prevVelocity;
+    float deltaVel;
+    Vector2 frameVel = Vector2.zero;
+    public float camFriction = 0.02f;
 
     void Start()
     {
@@ -44,7 +55,6 @@ public class User : MonoBehaviour
         #region pinch
         if (Input.touchCount == 2 && !isZooming)
         {
-            Debug.Log(cam.ScreenToWorldPoint(Input.GetTouch(0).position) + "   " + cam.ScreenToWorldPoint(Input.GetTouch(1).position));
             float dist = Vector2.Distance(Input.GetTouch(0).position, Input.GetTouch(1).position);
 
             if (!isPinching)
@@ -87,10 +97,32 @@ public class User : MonoBehaviour
         {
             if (Input.GetTouch(0).phase == TouchPhase.Moved)
             {
-                Vector2 delta = Input.GetTouch(0).deltaPosition;
+                Vector2 delta = Input.GetTouch(0).deltaPosition;               
                 cam.transform.position += (((Vector3)delta * zoomMoveInverseVal) * zoomMoveSensibility);
+                //zoomMoveVel = ((Vector2)cam.transform.position - prevZoomMoveVel)/*.magnitude*/ / Time.deltaTime;
+                //prevZoomMoveVel = transform.position;
+                //distance = Mathf.Sqrt(Mathf.Pow((prevPos.x - pos.x), 2) + Mathf.Pow((prevPos.y - pos.y), 2));
+                pos = cam.transform.position;
+                /*distance = Mathf.Sqrt(((pos.x - prevPos.x) * (pos.x - prevPos.x)) + ((pos.y - prevPos.y) * (pos.y - prevPos.y)));
+                prevPos = pos;
+                prevSpeed = speed;
+                speed = distance / Time.deltaTime;
+                prevVelocity = velocity;
+                velocity = speed - prevSpeed;
+                deltaVel = prevVelocity - velocity;*/
+                //acceleration = deltaVel / Time.deltaTime;
+
+                //Debug.Log(acceleration);
+
+                //cam.transform.position= pos + velocity * Time.deltaTime + (acceleration * Mathf.Pow(Time.deltaTime, 2) / 2);
             }
         }
+        velocity = ((Vector2)cam.transform.position - prevPos) / Time.deltaTime;
+        frameVel = Vector2.Lerp(frameVel, velocity, 0.1f);
+        frameVel -= velocity * camFriction;
+        prevPos = cam.transform.position;
+        if (frameVel != Vector2.zero) cam.transform.position += ((Vector3)frameVel / 100);
+
         #endregion
     }
 
@@ -106,7 +138,6 @@ public class User : MonoBehaviour
         float t = 0;
         bool camToo = currZoomVal == 0 && cam.transform.position != new Vector3(0, 0, -10);
         bool camZoomMove = currZoomVal < 0;
-        Debug.Log(pos);
         Vector3 camS = cam.transform.position;
         Vector3 camE = new Vector3(0, 0, -10);
 
