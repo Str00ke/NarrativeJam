@@ -1269,10 +1269,6 @@ MonoBehaviour:
   showIn: 0
   bagBtn: {fileID: 1852142618}
   invGo: {fileID: 990868450}
-  bagYMin: -503
-  bagYMax: -335
-  invYMin: -700
-  invYMax: -540
   invUp: {x: 0, y: 0}
   speed: 6
   animEase:
