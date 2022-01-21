@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 690057372}
   - component: {fileID: 690057371}
   m_Layer: 0
-  m_Name: Lock (1)
+  m_Name: Explode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -752,7 +752,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f1a4d136a9fb6847ac0194afde75d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  types: 010000000200000002000000
+  consequences:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &690057374
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1044,6 +1047,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  uiObj: {fileID: 7277720584581104740, guid: cef225866c3ea3042849ab6ec346a597, type: 3}
 --- !u!212 &955044400
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1084,8 +1088,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.18613082, g: 1, b: 0.08018869, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 9673f5839e8c5254791d4ec0c45f67e8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1104,7 +1108,7 @@ Transform:
   m_GameObject: {fileID: 955044398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.97, y: 0, z: -1.0556902}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -1126,14 +1130,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2, y: 0.2}
+    oldSize: {x: 3.6, y: 3.43}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
 --- !u!1 &990868450
 GameObject:
@@ -1507,7 +1511,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f1a4d136a9fb6847ac0194afde75d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  types: 00000000
+  consequences:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &1051317693
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1743,7 +1750,7 @@ MonoBehaviour:
   camZoomSpeed: 1
   zoomMoveSensibility: 0.001
   zoomMoveInverse: 1
-  camFriction: 0.04
+  camFriction: 0.06
   zoomFreeMoveRestraints: 100
 --- !u!4 &1283919269
 Transform:
@@ -2000,7 +2007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currSlot: {fileID: 0}
   onInteractable: {fileID: 0}
-  type: 1
+  type: 2
 --- !u!114 &1554968630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2014,15 +2021,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.061599493, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 9673f5839e8c5254791d4ec0c45f67e8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2208,8 +2215,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030517578, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0.000030518, y: 0.12905}
+  m_SizeDelta: {x: 31.8212, y: 99.7419}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1873873245
 MonoBehaviour:
@@ -2251,15 +2258,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.006186962, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 3603487442611920164, guid: b8ea62c32bcefe144b58fd8cbec3bf35, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

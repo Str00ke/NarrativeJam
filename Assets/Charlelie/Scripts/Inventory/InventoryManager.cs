@@ -72,6 +72,20 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void AddObjectWithObj(GameObject objGo)
+    {
+        GameObject obj = Instantiate(objGo);
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].objectIn == null)
+            {
+                obj.transform.parent = slots[i].transform;
+                slots[i].SetObjToSlot();
+                break;
+            }
+        }
+    }
+
     public Slot GetEmptySlot()
     {
         for (int i = 0; i < slots.Length; i++)
