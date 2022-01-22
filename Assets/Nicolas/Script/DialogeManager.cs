@@ -51,13 +51,47 @@ public class DialogeManager : MonoBehaviour
     public IEnumerator StartSpeak()
     {
         dialogue.text = "";
+        bool stop = false;
+        bool speakOnGate = false;
         string speak = phases[phaseN]._text[textN].dialogue;
+        string gateOpen = "";
+        string gateClose = "";
+
         for (int i = 0; i < speak.Length; i++)
         {
-            dialogue.text += speak[i];
-            yield return new WaitForSeconds(dialogueSpeed);
-        }
+            if (speak[i] == '<')
+                stop = true;
 
+
+
+            if (!stop)
+            {
+                if (!speakOnGate)
+                    dialogue.text += speak[i];
+                else
+                    dialogue.text += gateOpen + speak[i] + gateClose;
+                yield return new WaitForSeconds(dialogueSpeed);
+            }
+            else
+            {
+                gateOpen += speak[i];
+                gateClose += speak[i];
+                if (gateClose == "<")
+                    gateClose += '/';
+            }
+
+            if (speak[i] == '>' && stop)
+            {
+                stop = false;
+                speakOnGate = true;
+            }
+            if (gateOpen == gateClose)
+            {
+                stop = false;
+                speakOnGate = false;
+            }
+        }
+        dialogue.text = speak;
         if (phases[phaseN]._text[textN].reponse)
         {
             reponse[0].SetActive(true);

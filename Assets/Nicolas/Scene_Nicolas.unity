@@ -1009,11 +1009,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2837172487784654091, guid: 8c8b49469473840469ab1991c7c235b5, type: 3}
       propertyPath: phases.Array.data[0]._text.Array.data[1].dialogue
-      value: 't''es con '
+      value: t'es con ?
       objectReference: {fileID: 0}
     - target: {fileID: 2837172487784654091, guid: 8c8b49469473840469ab1991c7c235b5, type: 3}
       propertyPath: phases.Array.data[0]._text.Array.data[2].dialogue
-      value: ah j'en etais sur !
+      value: ah <i>j'en etais sur !</i>
       objectReference: {fileID: 0}
     - target: {fileID: 2837172487784654091, guid: 8c8b49469473840469ab1991c7c235b5, type: 3}
       propertyPath: phases.Array.data[0]._text.Array.data[3].dialogue
