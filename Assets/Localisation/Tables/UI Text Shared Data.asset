@@ -19,6 +19,62 @@ MonoBehaviour:
     m_Key: Menu option Languages
     m_Metadata:
       m_Items: []
+  - m_Id: 443852479016960
+    m_Key: Intro Barman
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444147791572992
+    m_Key: reponse intro barman
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444318512328704
+    m_Key: intro Barman 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445072467832832
+    m_Key: reponse intro Barman 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445479009136640
+    m_Key: Dialogue Barman
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445780642508800
+    m_Key: Dialogue Barman Choix 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446096310022144
+    m_Key: Dialogue Barman Choix 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446256037507072
+    m_Key: "Dialogue Barman R\xE9ponse 1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446304880177152
+    m_Key: "Dialogue Barman R\xE9ponse 2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447066058272768
+    m_Key: 'Dialogue Barman 2 suite '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447953925320704
+    m_Key: "Dialogue Barman 2 suite r\xE9ponse"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448162180902912
+    m_Key: Dialogue Barman 3 suite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448807122251776
+    m_Key: "Dialogue Barman 3 suite r\xE9ponse"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 449004887879680
+    m_Key: Dialogue Barman 3 suite et fin
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
