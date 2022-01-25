@@ -5,6 +5,6 @@ using UnityEngine;
 public enum ObjectType
 {
     KEY,
-    POTION,
-    FIREARM
+    ZIPPER,
+    DYNAMITE
 }

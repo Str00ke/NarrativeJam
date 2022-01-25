@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIObject : MonoBehaviour
 {
-    [HideInInspector]
+    //[HideInInspector]
     public Slot currSlot;
     [HideInInspector]
     public Interctable onInteractable;
