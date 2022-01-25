@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using System.Linq;
 
 public class DoF : MonoBehaviour
 {
@@ -14,6 +15,17 @@ public class DoF : MonoBehaviour
     bool isUpdate = false;
     void Start()
     {
+
+        /*var componentTypes = System.AppDomain.CurrentDomain.GetAssemblies()
+     .SelectMany(assembly => assembly.GetTypes())
+     .Where(type => type.IsClass && type.IsSubclassOf(typeof(Component)))
+ ;
+
+        foreach (var type in componentTypes)
+        {
+            Debug.Log(type.FullName);
+        }*/
+
         volume = GetComponent<Volume>();
         DepthOfField tmp;
         if (volume.profile.TryGet<DepthOfField>(out tmp))
