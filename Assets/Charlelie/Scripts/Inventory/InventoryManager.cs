@@ -41,14 +41,10 @@ public class InventoryManager : MonoBehaviour
     public GameObject bagBtn;
     public GameObject invGo;
 
-    public float bagYMin, bagYMax;
-    public float invYMin, invYMax;
     Vector2 invDown;
     [HideInInspector]
     public Vector2 invUp;
 
-    Vector2 bagDown;
-    Vector2 bagUp;
     bool isTravellingDone = true;
     public float speed;
 
@@ -56,9 +52,8 @@ public class InventoryManager : MonoBehaviour
 
     private void Start()
     {
-
-        invUp = Vector2.right;
-        invDown = Vector2.one;
+        invUp = Vector2.right; //(0, 1)
+        invDown = Vector2.one; //(1, 1)
         invGo.GetComponent<RectTransform>().pivot = invDown;
         bagBtn.GetComponent<RectTransform>().pivot = invDown;
     }
@@ -66,6 +61,20 @@ public class InventoryManager : MonoBehaviour
     public void AddObject()
     {
         GameObject obj = Instantiate(objPrefab);
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].objectIn == null)
+            {
+                obj.transform.parent = slots[i].transform;
+                slots[i].SetObjToSlot();
+                break;
+            }
+        }
+    }
+
+    public void AddObjectWithObj(GameObject objGo)
+    {
+        GameObject obj = Instantiate(objGo);
         for (int i = 0; i < slots.Length; i++)
         {
             if (slots[i].objectIn == null)

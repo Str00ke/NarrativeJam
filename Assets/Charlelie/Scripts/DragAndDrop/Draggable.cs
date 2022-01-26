@@ -18,13 +18,6 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         {
             transform.position = Input.mousePosition;
         }
-
-        #region mobile
-        if (Input.touchCount == 1)
-        {
-
-        }
-        #endregion
     }
 
     #region PC
@@ -47,9 +40,4 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     }
 
     #endregion
-
-    private void OnMouseUpAsButton()
-    {
-        
-    }
 }

@@ -11,4 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Charlelie/Charlelie.unity
     guid: e551576f34886e244a2ab11eb7943de1
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 9d8fa1c76079d9040a509e48a4758237, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 14939c782e3d3834ca85e68e46e66952, type: 2}

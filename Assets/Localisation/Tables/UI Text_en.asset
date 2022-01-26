@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI Text_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 9d598f9c522dd9f409a5f68df1753998, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 105400250368
+    m_Localized: Languages
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443852479016960
+    m_Localized: Welcome to my foreign bar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444147791572992
+    m_Localized: Hi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444318512328704
+    m_Localized: But I recognise you... It's been a long time since we've seen each
+      other. You haven't grown much.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445072467832832
+    m_Localized: A pleasure to see you again Jack ... I see you haven't lost your
+      humour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445479009136640
+    m_Localized: 'A young man like you is going to have a beer, isn''t he ?! '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445780642508800
+    m_Localized: Of course, what do you think, I'm not made of sugar ! Come on, 
+      give me the beer !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446096310022144
+    m_Localized: You know uncle I'm not old enough to drink this...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446256037507072
+    m_Localized: That makes me happy! This is the beer that my bar is famous for
+      !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446304880177152
+    m_Localized: Stop your nonsense... (long white) Well if you don't want it I'll
+      leave it here !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447066058272768
+    m_Localized: And if not, it's been a long time since I've seen you here. Tell
+      me, what brings you here?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447953925320704
+    m_Localized: I'm looking for Grandpa Harry's old treasure, do you know how to
+      help me ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448162180902912
+    m_Localized: Do you believe in his old stories ? I never believed him, so your
+      grandfather didn't tell me much about him. ... Wait ... I remember that he
+      met a miner at the time with whom he had done the 400 rounds of digging. They
+      used to meet in an abandoned mine to be out of sight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448807122251776
+    m_Localized: And that mine where he played is still standing ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 449004887879680
+    m_Localized: For sure you can go there without any doubt, it is close to the
+      mountain, it must still be standing !
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI Text_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: 9d598f9c522dd9f409a5f68df1753998, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 105400250368
+    m_Localized: Langages
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443852479016960
+    m_Localized: "Je vous souhaite la bienvenue dans mon bar \xE9tranger"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444147791572992
+    m_Localized: Salut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444318512328704
+    m_Localized: "Mais je te reconnais \u2026 \xC7a fait longtemps que l\u2019on
+      ne s'\xE9tait pas vu\r. Tu n\u2019as pas beaucoup grandi dis donc."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445072467832832
+    m_Localized: "Un plaisir de te revoir Jack \u2026 Je vois que tu n\u2019as pas
+      perdu ton humour"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445479009136640
+    m_Localized: "Un jeune homme comme toi, \xE7a va bien boire une petite bi\xE8re,
+      hein ?! "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445780642508800
+    m_Localized: "Bien s\xFBr, qu\u2019est-ce tu crois, je suis pas fait en sucre
+      ! Allez par ici la bibine !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446096310022144
+    m_Localized: "Tu sais tonton je suis pas assez grand pour boire ceci\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446256037507072
+    m_Localized: "Tiens \xE7a me fait plaisir ! C'est la bi\xE8re qui fait la renomm\xE9e
+      de mon bar !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446304880177152
+    m_Localized: "Arr\xEAte ton chariot.. (long blanc) Bon si t\u2019en veux pas
+      je la laisse ici !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447066058272768
+    m_Localized: "Et sinon, \xE7a faisait longtemps que je ne t\u2019avais pas vu
+      ici. Dis-moi,qu\u2019est ce qui t\u2019am\xE8ne ?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447953925320704
+    m_Localized: "Je suis a la recherche de l\u2019ancien tr\xE9sor du grand-p\xE8re
+      Harry, tu sais comment m\u2019aider ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448162180902912
+    m_Localized: "Tu crois en ses vieilles histoires?  moi je ne l\u2019ai jamais
+      cru, ton grand-p\xE8re ne m'a donc pas dit grand-chose \xE0 son sujet. \u2026
+      Attends \u2026 Je me souviens qu\u2019il avait rencontr\xE9 \xE0 l'\xE9poque
+      un mineur avec lequel il avait fait les 400 coups de pioche. Ils se retrouvaient
+      dans une mine abandonn\xE9e pour \xEAtre \xE0 l\u2019abri des regards"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448807122251776
+    m_Localized: "Et cette mine o\xF9 il jouait tiens encore debout ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 449004887879680
+    m_Localized: "Pour s\xFBr, tu peux y aller sans aucun doute, elle est proche
+      de la montagne, elle doit \xEAtre encore debout !"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1
