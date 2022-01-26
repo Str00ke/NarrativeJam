@@ -27,9 +27,20 @@ public class GameManager : MonoBehaviour
     }
 
     #endregion
+    
 
     public GameObject draggedObject;
-
+    public GameObject dialogBg;
+    public GameObject charaUI;
+    public bool isShowingDialog;
+    public float dialogAnimSpeed;
+    public AnimationCurve dialogAnim;
+    public List<CharaID> ids = new List<CharaID>();
+    private void Start()
+    {
+        dialogBg.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 1.5f);
+        charaUI.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 2);
+    }
 
     public void QuitGame()
     {
@@ -54,16 +65,4 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
     }
-
-    void Start()
-    {
-        
-    }
-
-
-    void Update()
-    {
-        
-    }
-
 }
