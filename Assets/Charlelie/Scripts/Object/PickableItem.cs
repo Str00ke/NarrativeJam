@@ -9,6 +9,12 @@ public class PickableItem : MonoBehaviour, IPointerDownHandler
     public AnimationCurve animEase;
     bool test = false;
 
+    public delegate void OnPicked();
+    public OnPicked _pickedDelegate;
+
+    public delegate void OnInInv();
+    public OnInInv _invDelegate;
+
     public GameObject uiObj;
     void Start()
     {
@@ -29,6 +35,7 @@ public class PickableItem : MonoBehaviour, IPointerDownHandler
 
     public void Picked()
     {
+        if (_pickedDelegate != null) _pickedDelegate();
         if (GameManager.instance.isShowingDialog) return;
         Slot slot = InventoryManager.instance.GetEmptySlot();
         if (!InventoryManager.instance.showIn) 

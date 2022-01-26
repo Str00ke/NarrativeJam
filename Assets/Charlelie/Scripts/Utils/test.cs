@@ -7,6 +7,7 @@ public class test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
         foreach (Component c in GetComponents<MonoBehaviour>())
         {
             Debug.Log(c.name);

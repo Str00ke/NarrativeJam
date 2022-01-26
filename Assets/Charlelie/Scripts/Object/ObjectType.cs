@@ -6,5 +6,6 @@ public enum ObjectType
 {
     KEY,
     ZIPPER,
-    DYNAMITE
+    DYNAMITE,
+    RADIO
 }

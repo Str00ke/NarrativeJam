@@ -7,6 +7,9 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     bool isDragged = false;
 
+    public delegate void OnThrashed();
+    public OnThrashed _thrashedDelegate;
+
     void Start()
     {
         
@@ -38,6 +41,12 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         }
         if (GetComponent<UIObject>().currSlot != null)
             transform.position = GetComponent<UIObject>().currSlot.gameObject.transform.position;
+
+        if (_thrashedDelegate != null)
+        {
+            GetComponent<UIObject>().DetachFromSlot();
+            _thrashedDelegate();
+        }
     }
 
     #endregion
