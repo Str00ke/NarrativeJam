@@ -28,7 +28,8 @@ public class PickableItem : MonoBehaviour, IPointerDownHandler
     }
 
     public void Picked()
-    {        
+    {
+        if (GameManager.instance.isShowingDialog) return;
         Slot slot = InventoryManager.instance.GetEmptySlot();
         if (!InventoryManager.instance.showIn) 
         {

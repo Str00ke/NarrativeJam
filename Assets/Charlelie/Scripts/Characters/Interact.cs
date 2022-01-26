@@ -21,6 +21,7 @@ public class Interact : MonoBehaviour, IPointerDownHandler
     Vector2 charaUIDown = new Vector2(0.5f, 2);
     Vector2 charaUIUp = new Vector2(0.5f, 0.5f);
 
+
     private void Start()
     {
         dialogBg = GameManager.instance.dialogBg;
@@ -45,24 +46,36 @@ public class Interact : MonoBehaviour, IPointerDownHandler
     {
         if (isShowing) return;
         isDialog = !isDialog;
-        GameManager.instance.isShowingDialog = isDialog;
-        if (isDialog) 
+        if (isDialog)
         {
             Sprite spr = null;
-            foreach(CharaID id in GameManager.instance.ids)
+            foreach (CharaID id in GameManager.instance.ids)
             {
                 if (id.id == charaId)
                     spr = id.img;
                 break;
             }
             GameManager.instance.charaUI.GetComponent<Image>().sprite = spr;
+            InventoryManager.instance.bagBtn.SetActive(false);
+            if (InventoryManager.instance.showIn) InventoryManager.instance.UpdateInventory();
+            FindObjectOfType<DoF>().UpdateBlur();
+            FindObjectOfType<ColorEffect>().UpdateColor();
             StartCoroutine(ShowDialog(pivotDown, pivotUp, charaUIDown, charaUIUp));
         }
-        else StartCoroutine(ShowDialog(pivotUp, pivotDown, charaUIUp, charaUIDown));
+        else 
+        {
+            InventoryManager.instance.bagBtn.SetActive(true);
+            FindObjectOfType<DoF>().UpdateBlur();
+            FindObjectOfType<ColorEffect>().UpdateColor();
+            StartCoroutine(ShowDialog(pivotUp, pivotDown, charaUIUp, charaUIDown));
+        } 
     }
 
     IEnumerator ShowDialog(Vector2 s, Vector2 e, Vector2 cs, Vector2 ce)
     {
+        if (isDialog) GameManager.instance.isShowingDialog = true;
+        
+        
         isShowing = true;
         float t = 0;
         while(t < 1)
@@ -73,6 +86,7 @@ public class Interact : MonoBehaviour, IPointerDownHandler
             yield return null;
         }
         isShowing = false;
+        if (!isDialog) GameManager.instance.isShowingDialog = false;
         yield return null;
     }
 }

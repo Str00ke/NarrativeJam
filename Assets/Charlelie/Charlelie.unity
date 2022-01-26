@@ -2322,6 +2322,7 @@ GameObject:
   - component: {fileID: 1833634104}
   - component: {fileID: 1833634106}
   - component: {fileID: 1833634103}
+  - component: {fileID: 1833634107}
   m_Layer: 3
   m_Name: Background
   m_TagString: Untagged
@@ -2468,6 +2469,47 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 34103bef43b529d479d68a5497209092, type: 2}
+--- !u!114 &1833634107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833634102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c737c7713a86b5c4dbe846faf2965101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 1
+  contrastMin: 0
+  contrastMax: 50
+  baseCol: {r: 1, g: 1, b: 1, a: 1}
+  effectCol: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
 --- !u!1 &1852142618
 GameObject:
   m_ObjectHideFlags: 0

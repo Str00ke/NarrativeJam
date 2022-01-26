@@ -55,6 +55,7 @@ public class Interctable : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if (GameManager.instance.isShowingDialog) return;
         if (FindObjectOfType<GameManager>().draggedObject != null)
         {
             GetComponent<SpriteRenderer>().color = Color.green;

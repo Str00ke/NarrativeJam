@@ -23,6 +23,7 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     #region PC
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (GameManager.instance.isShowingDialog) return;
         GameManager.instance.draggedObject = gameObject;
         isDragged = true;
     }

@@ -45,7 +45,8 @@ public class MapManager : MonoBehaviour
     public void GotToLoc()
     {
         //GameManager.instance.LoadLevel(currLocSelected);
-        GameManager.instance.LoadLevelAsync(currLocSelected, UnityEngine.SceneManagement.LoadSceneMode.Single);
+        //GameManager.instance.LoadLevelAsync(currLocSelected, UnityEngine.SceneManagement.LoadSceneMode.Single);
+        FindObjectOfType<tmp>().LoadLevel(currLocSelected);
     }
 
     public void Cancel()

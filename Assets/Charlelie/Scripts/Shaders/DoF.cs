@@ -46,17 +46,22 @@ public class DoF : MonoBehaviour
         }
     }
 
+    public void UpdateBlur()
+    {
+        if (isUpdate) return;
+        if (isBlur) UnBlur();
+        else Blur();
+        isBlur = !isBlur;
+    }
 
 
     public void Blur()
     {
-        Debug.Log("BLUR");
         StartCoroutine(apply(min, max));
     }
 
     public void UnBlur()
     {
-        Debug.Log("UNBLUR");
         StartCoroutine(apply(max, min));
     }
 
