@@ -10,7 +10,7 @@ public class DialogeManager : MonoBehaviour
     public float dialogueSpeed;
     public GameObject[] reponse = new GameObject [2] ;
     public LocalizedString loca;
-    public BarMan barman;
+    public PersoManager perso;
     public bool whait = false;
     public bool spawnBooton = false;
 
@@ -40,23 +40,23 @@ public class DialogeManager : MonoBehaviour
                 
 
                 //dialogue.text = loca.GetLocalizedString();
-                if ( OnSpeak.instance.onSpeak && !barman.question[barman.step])
+                if ( OnSpeak.instance.onSpeak && !perso.question[perso.step])
                 {
                     //loca.SetReference(loca.TableReference, "intro Barman 2");
                     //textN++;
                     //dialogue.text = "";
-                    barman.step++;
-                    if (barman.dialogue[barman.step] != "stop")
+                    perso.step++;
+                    if (perso.dialogue[perso.step] != "stop")
                     {
 
-                        loca.SetReference(loca.TableReference, barman.dialogue[barman.step]);
+                        loca.SetReference(loca.TableReference, perso.dialogue[perso.step]);
                         StartCoroutine(StartSpeak());
 
                     }
                     else
                     {
-                        barman.step = barman.startPhase[barman.phase];
-                        loca.SetReference(loca.TableReference, barman.dialogue[barman.step]);
+                        perso.step = perso.startPhase[perso.phase];
+                        loca.SetReference(loca.TableReference, perso.dialogue[perso.step]);
                         OnSpeak.instance.onSpeak = false;
                         gameObject.SetActive(false);
                         //last = false;
@@ -134,7 +134,7 @@ public class DialogeManager : MonoBehaviour
             
             gameObject.SetActive(true);
             dialogue = gameObject.GetComponentInChildren<Text>();
-            loca.SetReference(loca.TableReference, barman.dialogue[barman.step]);
+            loca.SetReference(loca.TableReference, perso.dialogue[perso.step]);
             StartCoroutine(StartSpeak());
         }
     }

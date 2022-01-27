@@ -2,16 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BarMan : MonoBehaviour
+public class BarMan : PersoManager
 {
-    public DialogeManager perso;
-    [Header("dialogue")]
-    public string[] dialogue;
-    public bool[] question;
-    public int step = 0;
-    [Header("phase")]
-    public int[] startPhase;
-    public int phase = 0;
+
     // Start is called before the first frame update
 
     private void Update()
