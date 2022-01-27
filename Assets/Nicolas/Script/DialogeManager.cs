@@ -2,42 +2,66 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Localization;
+
 public class DialogeManager : MonoBehaviour
 {
     private Text dialogue;
-    private int textN = 0;
-    public List<Phase> phases;
     public float dialogueSpeed;
-    public int phaseN;
     public GameObject[] reponse = new GameObject [2] ;
-    private bool last;
+    public LocalizedString loca;
+    public BarMan barman;
+    public bool whait = false;
+    public bool spawnBooton = false;
+
+    private void Awake()
+    {
+        
+        //loca = gameObject.GetComponentInChildren<L>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
-
+    public string GetText()
+    {
+        return dialogue.text;
+    }
     // Update is called once per frame
 
     void Update()
     {
         foreach (Touch touch in Input.touches)
         {
-            if (touch.phase == TouchPhase.Began)
+            if (touch.phase == TouchPhase.Began && !whait)
             {
-                if (!phases[phaseN]._text[textN].reponse && OnSpeak.instance.onSpeak)
+                
+
+                //dialogue.text = loca.GetLocalizedString();
+                if ( OnSpeak.instance.onSpeak && !barman.question[barman.step])
                 {
-                    textN++;
+                    //loca.SetReference(loca.TableReference, "intro Barman 2");
+                    //textN++;
                     //dialogue.text = "";
-                    if (textN < phases[phaseN]._text.Count && !last)
+                    barman.step++;
+                    if (barman.dialogue[barman.step] != "stop")
+                    {
+
+                        loca.SetReference(loca.TableReference, barman.dialogue[barman.step]);
                         StartCoroutine(StartSpeak());
+
+                    }
                     else
                     {
+                        barman.step = barman.startPhase[barman.phase];
+                        loca.SetReference(loca.TableReference, barman.dialogue[barman.step]);
                         OnSpeak.instance.onSpeak = false;
                         gameObject.SetActive(false);
-                        last = false;
+                        //last = false;
                     }
+                    
                 }
             }
         }
@@ -50,10 +74,11 @@ public class DialogeManager : MonoBehaviour
 
     public IEnumerator StartSpeak()
     {
+        whait = true;
         dialogue.text = "";
         bool stop = false;
         bool speakOnGate = false;
-        string speak = phases[phaseN]._text[textN].dialogue;
+        string speak = loca.GetLocalizedString();//phases[phaseN]._text[textN].dialogue;
         string gateOpen = "";
         string gateClose = "";
 
@@ -92,29 +117,28 @@ public class DialogeManager : MonoBehaviour
             }
         }
         dialogue.text = speak;
-        if (phases[phaseN]._text[textN].reponse)
-        {
-            reponse[0].SetActive(true);
-            reponse[1].SetActive(true);
-            reponse[0].GetComponentInChildren<Text>().text = phases[phaseN]._text[textN].reponseYes;
-            reponse[1].GetComponentInChildren<Text>().text = phases[phaseN]._text[textN].reponseNo;
-        }
+        whait = false;
+
+        spawnBooton = true;
+        yield return new WaitForSeconds(0.1f);
+        spawnBooton = false;
 
     }
 
     public void spawnDialogue()
     {
-        if((!OnSpeak.instance.onSpeak && OnSpeak.instance.idSpeaker != gameObject.GetInstanceID()) && phaseN < phases.Count)
+        if((!OnSpeak.instance.onSpeak && OnSpeak.instance.idSpeaker != gameObject.GetInstanceID()))
         {
             OnSpeak.instance.onSpeak = true;
             OnSpeak.instance.idSpeaker = gameObject.GetInstanceID();
-            textN = 0;
+            
             gameObject.SetActive(true);
             dialogue = gameObject.GetComponentInChildren<Text>();
+            loca.SetReference(loca.TableReference, barman.dialogue[barman.step]);
             StartCoroutine(StartSpeak());
         }
     }
-
+    /*
     public void ReponseRight()
     {
         textN += 2;
@@ -146,6 +170,6 @@ public class DialogeManager : MonoBehaviour
         public bool reponse;
         public string reponseNo;
         public string reponseYes;
-    }
+    }*/
 }
 
