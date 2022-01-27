@@ -816,6 +816,7 @@ MonoBehaviour:
   - Dialogue Barman 3 suite
   - "Dialogue Barman 3 suite r\xE9ponse"
   - Dialogue Barman 3 suite et fin
+  - stop
   question: 000000000001000000000000
   step: 0
   startPhase: 000000000500000006000000
