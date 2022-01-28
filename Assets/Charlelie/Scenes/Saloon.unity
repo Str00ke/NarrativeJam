@@ -2470,7 +2470,7 @@ MonoBehaviour:
   flagChoice: 1
   dialogue: {fileID: 541721052}
   speakerName: {fileID: 411509426}
-  charaName: Billy Joe
+  charaName: Billy Bob
   dialogueSpeed: 0.02
   reponse:
   - {fileID: 892866270}

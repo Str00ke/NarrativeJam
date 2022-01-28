@@ -3964,7 +3964,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8daaa261e28b96245918d66143efadce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57c52b7a82ca8c6428b7192d450900aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3984,7 +3984,7 @@ Transform:
   m_GameObject: {fileID: 1207093485}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.1182, y: -0.4137, z: 0}
-  m_LocalScale: {x: 4.5077925, y: 3.929715, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -5744,7 +5744,7 @@ MonoBehaviour:
   flagChoice: 1
   dialogue: {fileID: 532260402}
   speakerName: {fileID: 863020242}
-  charaName: "Chouette ennivr\xE9e"
+  charaName: Chouette ivre
   dialogueSpeed: 0.02
   reponse:
   - {fileID: 2060610595}

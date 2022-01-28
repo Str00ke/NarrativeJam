@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Duel : MonoBehaviour
 {
-    public GameObject gun, enemy, btn;
+    public GameObject gun, enemy, btn, panel;
     float currRot;
     public float rotMin, rotMax;
     public float speed;
@@ -30,13 +30,15 @@ public class Duel : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(gun.transform.position, gun.transform.right, 1000);
             if (hit)
             {
-                FindObjectOfType<Text>().text = "You win";
                 btn.SetActive(true);
+                panel.SetActive(true);
+                FindObjectOfType<Text>().text = "You win";
             }
             else 
             {
-                FindObjectOfType<Text>().text = "You die!";
                 btn.SetActive(true);
+                panel.SetActive(true);
+                FindObjectOfType<Text>().text = "You die!";
             }
             
         }
