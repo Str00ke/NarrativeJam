@@ -59,8 +59,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 446304880177152
-    m_Localized: Stop your nonsense... (long white) Well if you don't want it I'll
-      leave it here !
+    m_Localized: Stop your nonsense... Well if you don't want it I'll leave it here
+      !
     m_Metadata:
       m_Items: []
   - m_Id: 447066058272768
@@ -90,15 +90,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 816613357531136
-    m_Localized: hello darling, what will it be for you ?
+    m_Localized: Hello darling, what will it be for you ?
     m_Metadata:
       m_Items: []
   - m_Id: 816908913356800
-    m_Localized: just one finger
+    m_Localized: Hi, I'm looking for informations
     m_Metadata:
       m_Items: []
   - m_Id: 817045224042496
-    m_Localized: Don't you want a whiskey first ?
+    m_Localized: What type?
     m_Metadata:
       m_Items: []
   - m_Id: 817721631059968
@@ -114,23 +114,16 @@ MonoBehaviour:
     m_Localized: Oh dear, old Joe, I've managed to pluck him more than once !
     m_Metadata:
       m_Items: []
-  - m_Id: 818235798204416
-    m_Localized: 'The vices of gambling... it''s beyond me !
-
-      But... my grandfather
-      is not a bird...'
+  - m_Id: 1252654117625856
+    m_Localized: As long as I don't risk my life.
     m_Metadata:
       m_Items: []
-  - m_Id: 818614065704960
-    m_Localized: "Sure, but for me it's a gold mine, with all these pathetic players
-      ! \r\nMy word, you're as ugly as you are stupid! Take your fingers off the
-      table, you'll get it dirty..."
+  - m_Id: 1252470713294848
+    m_Localized: My grandfather dropped his will in a hole
     m_Metadata:
       m_Items: []
-  - m_Id: 818736333860864
-    m_Localized: 'Vicious !
-
-      Sorry...'
+  - m_Id: 1252391591944192
+    m_Localized: I am looking for a family treasure...
     m_Metadata:
       m_Items: []
   - m_Id: 819005935333376
@@ -139,7 +132,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 819335783788544
-    m_Localized: What ? Speed, crack, coke ?
+    m_Localized: What ? Speed, crack, cocaine ?
     m_Metadata:
       m_Items: []
   - m_Id: 819474879492096
@@ -152,7 +145,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 819811073929216
-    m_Localized: Thank you !
+    m_Localized: That's it!
     m_Metadata:
       m_Items: []
   - m_Id: 821252979175424
@@ -167,11 +160,8 @@ MonoBehaviour:
       me what are you doing here ?'
     m_Metadata:
       m_Items: []
-  - m_Id: 822621748342784
-    m_Localized: 'I am looking for a family treasure...
-
-      My grandfather dropped
-      his will in a hole'
+  - m_Id: 1252698807934976
+    m_Localized: Count it as done.
     m_Metadata:
       m_Items: []
   - m_Id: 823002809249792
@@ -187,11 +177,8 @@ MonoBehaviour:
       one of our favours.
     m_Metadata:
       m_Items: []
-  - m_Id: 823691618824192
-    m_Localized: 'As long as I don''t risk my life.
-
-      If this favour can be
-      a second peace pipe, I accept.'
+  - m_Id: 1261530967777280
+    m_Localized: Not cool...
     m_Metadata:
       m_Items: []
   - m_Id: 824215093129216
@@ -208,10 +195,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 824842128994304
-    m_Localized: 'You''re the man I''m looking for
-
-      You''re mostly high /
-      You''ve mostly taken too much of the peace pipe'
+    m_Localized: You've mostly taken too much of the peace pipe
     m_Metadata:
       m_Items: []
   - m_Id: 825327934255104
@@ -224,13 +208,11 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 825924712411136
     m_Localized: Don't tell me, I see everything, I know everything, considering
-      your age you are the grandson of old Joe.
+      your age you are the grandson of Old Joe.
     m_Metadata:
       m_Items: []
-  - m_Id: 825926511767552
-    m_Localized: 'Exactly
-
-      Yeah'
+  - m_Id: 1260997494251520
+    m_Localized: Quick...
     m_Metadata:
       m_Items: []
   - m_Id: 826170653814784
@@ -240,8 +222,8 @@ MonoBehaviour:
   - m_Id: 826172381868032
     m_Localized: 'I''m on the trail of a treasure he left behind
 
-      Aren''t
-      you supposed to know everything ?'
+      Aren''t you
+      supposed to know everything ?'
     m_Metadata:
       m_Items: []
   - m_Id: 826453119217664
@@ -307,23 +289,16 @@ MonoBehaviour:
     m_Localized: Hey, but you're old Joe's little fart !
     m_Metadata:
       m_Items: []
-  - m_Id: 832672437383168
-    m_Localized: 'Yes !
-
-      Stop calling me that !'
+  - m_Id: 1264283907596288
+    m_Localized: But I just came to find my grandfathers treasure...
     m_Metadata:
       m_Items: []
-  - m_Id: 833363419607040
-    m_Localized: 'It is the eye that says shit to the other that is familiar to me.
-
-      I
-      do what I want !'
+  - m_Id: 1264190492057600
+    m_Localized: Get back or I shoot!
     m_Metadata:
       m_Items: []
-  - m_Id: 833364048752640
-    m_Localized: 'Not cool...
-
-      Please don''t hit me !'
+  - m_Id: 1261586642968576
+    m_Localized: Please don't hit me !
     m_Metadata:
       m_Items: []
   - m_Id: 833717104291840
@@ -338,6 +313,220 @@ MonoBehaviour:
     m_Localized: Old Joe kept talking about this treasure, unfortunately he never
       told me where... but if you want the last I heard of him was in the old trapper's
       cabin in the forest ! You should check it out !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1240834648645632
+    m_Localized: I don't quite know this place, everything fits me.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1241319086563328
+    m_Localized: I'm not accustomed to here, I'm staying a lot of my time here. Therefore
+      I know some of the powerful guys. They came here one day or another, even indians
+      came here. But the winner is the miner.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1241320672010240
+    m_Localized: Indians?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1241322781745152
+    m_Localized: Their boss come from time to another for getting some good time.
+      But he's not that chatty.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1241323893235712
+    m_Localized: What about the miner?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1241325369630720
+    m_Localized: He's my biggest client. Sometimes he come here drinking some beers,
+      ending under the table and come to me after getting things right. I've still
+      got his lighter, I need to give it back to him someday.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1241326648893440
+    m_Localized: I'm planning to visit places, maybe I'll meet him.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1241328389529600
+    m_Localized: You could give it to him, I'm not going to meet him that soon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1241336039940096
+    m_Localized: Count on me.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1246587891556352
+    m_Localized: stop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1250439248289792
+    m_Localized: The vices of gambling... it's beyond me !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1250674787819520
+    m_Localized: But... my grandfather is not a bird...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1250707713105920
+    m_Localized: "Sure, but for me it's a gold mine, with all these pathetic players
+      ! \r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1250930401288192
+    m_Localized: My word, you're as ugly as you are stupid! Take your fingers off
+      the table, you'll get it dirty...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1250973350961152
+    m_Localized: Vicious !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1251020960505856
+    m_Localized: Sorry...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1264306149990400
+    m_Localized: Of the Old Joe?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1252827422072832
+    m_Localized: If this favour can be a second peace pipe, I accept.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1261554183249920
+    m_Localized: I do what I want !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1261333000822784
+    m_Localized: Stop calling me that !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1261466102865920
+    m_Localized: It is the eye that says shit to the other that is familiar to me.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1261266462384128
+    m_Localized: Yes !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1252867116965888
+    m_Localized: It's on my way
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1264381722959872
+    m_Localized: Oh no... I need to get this moterf*cker!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1264365675552768
+    m_Localized: My boy, you've come too late, a strange guy with a hat and a poncho
+      just get it with his strength!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1264335212322816
+    m_Localized: Yes, this man!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1255834633183232
+    m_Localized: Exactly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1255838756184064
+    m_Localized: Yeah...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256024442216448
+    m_Localized: I'm searching a treasure he left.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256034240110592
+    m_Localized: Just one.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256036387594240
+    m_Localized: No...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256038505717760
+    m_Localized: You're wasting my time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256039675928576
+    m_Localized: I can see that
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256054808977408
+    m_Localized: Aren't you supposed to know everything?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256056558002176
+    m_Localized: If you want to...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256058101506048
+    m_Localized: A dragoon!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256059942805504
+    m_Localized: WOOOOOOOOW
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256060915884032
+    m_Localized: Thank you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1264408998518784
+    m_Localized: Put a bullet between his eyes kid!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1265587304341504
+    m_Localized: You bastard you think you can take what's mine like that ?!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1265662860533760
+    m_Localized: Boy you so naive, you really thought it would be that easy to get
+      this gigantic fortune!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1265683194519552
+    m_Localized: Well... yes...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1265705470468096
+    m_Localized: Well yes but no!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1265837410689024
+    m_Localized: If it's like that, I I'll roshambo you!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1309948557729792
+    m_Localized: Do you see the bridge at village east?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1310460346703872
+    m_Localized: Of course
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1310514268676096
+    m_Localized: I'll give you two dynamite, one for your treasure and one for this
+      bridge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1310585940942848
+    m_Localized: Then it's a deal! I've done my part, your turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1310619965136896
+    m_Localized: Always a pleasure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1314756085751808
+    m_Localized: My powers have mysteries...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1315132763611136
+    m_Localized: Go see the chief, he need to talk to you
     m_Metadata:
       m_Items: []
   references:

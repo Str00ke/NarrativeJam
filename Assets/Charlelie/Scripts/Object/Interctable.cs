@@ -17,10 +17,6 @@ public class Interctable : MonoBehaviour
     }
 
 
-    void Update()
-    {
-        
-    }
 
     public void Interact(UIObject obj)
     {
@@ -41,7 +37,7 @@ public class Interctable : MonoBehaviour
                 {
                     consequences.Invoke();
                     foreach (GameObject objs in objUsed) Destroy(objs);
-                    Destroy(gameObject);
+                    if(gameObject.name != "Miner") Destroy(gameObject);
                     return;
                 }
                 else return;
@@ -58,7 +54,7 @@ public class Interctable : MonoBehaviour
         if (GameManager.instance.isShowingDialog) return;
         if (FindObjectOfType<GameManager>().draggedObject != null)
         {
-            GetComponent<SpriteRenderer>().color = Color.green;
+            //GetComponent<SpriteRenderer>().color = Color.green;
             GameManager.instance.draggedObject.GetComponent<UIObject>().onInteractable = this;
         }
     }

@@ -6,11 +6,29 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Charlelie/Scenes/Menu.unity
+    guid: 6b59aa1c2dbc6024bb09df36f3034653
   - enabled: 1
-    path: Assets/Charlelie/Charlelie.unity
-    guid: e551576f34886e244a2ab11eb7943de1
+    path: Assets/Charlelie/Scenes/Mine.unity
+    guid: ee2cb70ac55908640bcf982f436066bd
+  - enabled: 1
+    path: Assets/Charlelie/Scenes/MinigameDuel.unity
+    guid: 9a2d73606b9bd6d45a4b5c211a57ec98
+  - enabled: 1
+    path: Assets/Charlelie/Scenes/House.unity
+    guid: 90dc026bcdda8314c95dd1671aeae183
+  - enabled: 1
+    path: Assets/Charlelie/Scenes/Saloon.unity
+    guid: db1236f5eaac58e49b220763bf78a916
+  - enabled: 1
+    path: Assets/Charlelie/Scenes/Indian village.unity
+    guid: 73efac4c165aafd4294a350910ff9ce3
+  - enabled: 1
+    path: Assets/Charlelie/Scenes/Map.unity
+    guid: 8a7989ff4d9eb4e49a8caf4aa00abaa7
+  - enabled: 1
+    path: Assets/Charlelie/Scenes/EndScreen.unity
+    guid: 88d5fd4f636883c45b14b559d8988f54
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 9d8fa1c76079d9040a509e48a4758237, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 14939c782e3d3834ca85e68e46e66952, type: 2}

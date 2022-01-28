@@ -67,6 +67,7 @@ public class DoF : MonoBehaviour
 
     IEnumerator apply(float s, float e)
     {
+        FindObjectOfType<Interact>().dofDone = false;
         isUpdate = true;
         float t = 0;
         while (t < 1)
@@ -76,6 +77,7 @@ public class DoF : MonoBehaviour
             yield return null;
         }
         isUpdate = false;
+        FindObjectOfType<Interact>().dofDone = true;
         yield return null;
     }
 }

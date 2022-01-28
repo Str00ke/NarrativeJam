@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 
 public class GameManager : MonoBehaviour
 {
@@ -36,10 +37,31 @@ public class GameManager : MonoBehaviour
     public float dialogAnimSpeed;
     public AnimationCurve dialogAnim;
     public List<CharaID> ids = new List<CharaID>();
+    public BarMan charaSpeaking;
+    public bool isSpeaking = false;
     private void Start()
     {
         dialogBg.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 1.5f);
         charaUI.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 2);
+
+        //LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[i];
+    }
+
+
+
+    public void DialogAdvance()
+    {
+        charaSpeaking.perso.Advance();
+    }
+
+    public void Choix1()
+    {
+        charaSpeaking.Choix1();
+    }
+
+    public void Choix2()
+    {
+        charaSpeaking.Choix2();
     }
 
     public void QuitGame()

@@ -7,5 +7,7 @@ public enum ObjectType
     KEY,
     ZIPPER,
     DYNAMITE,
-    RADIO
+    RADIO,
+    BEER,
+    SHOVEL
 }

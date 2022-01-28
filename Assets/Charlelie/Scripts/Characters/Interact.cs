@@ -20,6 +20,9 @@ public class Interact : MonoBehaviour, IPointerDownHandler
     RectTransform charaUIRect;
     Vector2 charaUIDown = new Vector2(0.5f, 2);
     Vector2 charaUIUp = new Vector2(0.5f, 0.5f);
+    public bool dofDone = true;
+    public bool isOnInteract = false;
+    public Vector2 uiSize;
 
 
     private void Start()
@@ -33,29 +36,35 @@ public class Interact : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (GameManager.instance.isSpeaking) return;
         UpdateDialogRender();
     }
 
     private void OnMouseDown()
     {
+        if (GameManager.instance.isSpeaking) return;
         UpdateDialogRender();
     }
 
 
     public void UpdateDialogRender()
     {
-        if (isShowing) return;
+        if (isShowing || !dofDone) return;
         isDialog = !isDialog;
         if (isDialog)
         {
+            GameManager.instance.isSpeaking = true;
             Sprite spr = null;
             foreach (CharaID id in GameManager.instance.ids)
             {
                 if (id.id == charaId)
+                {
                     spr = id.img;
-                break;
+                    break;
+                } 
             }
             GameManager.instance.charaUI.GetComponent<Image>().sprite = spr;
+            GameManager.instance.charaUI.GetComponent<RectTransform>().sizeDelta = uiSize;
             InventoryManager.instance.bagBtn.SetActive(false);
             if (InventoryManager.instance.showIn) InventoryManager.instance.UpdateInventory();
             FindObjectOfType<DoF>().UpdateBlur();
@@ -86,7 +95,17 @@ public class Interact : MonoBehaviour, IPointerDownHandler
             yield return null;
         }
         isShowing = false;
-        if (!isDialog) GameManager.instance.isShowingDialog = false;
+        if (!isDialog) 
+        {
+            GameManager.instance.isShowingDialog = false;
+            GameManager.instance.isSpeaking = false;
+            GameManager.instance.charaSpeaking = null;
+        }
+        if (isDialog) 
+        {
+            GetComponent<DialogeManager>().spawnDialogue();
+            GameManager.instance.charaSpeaking = GetComponent<BarMan>();
+        } 
         yield return null;
     }
 }

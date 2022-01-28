@@ -32,4 +32,10 @@ public class Unlock : MonoBehaviour
         comp.enabled = true;
     }
 
+    public void UnlockAll()
+    {
+        foreach (MonoBehaviour c in compsToLock)
+            c.enabled = true;
+    }
+
 }

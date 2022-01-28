@@ -34,6 +34,7 @@ public class InventoryManager : MonoBehaviour
     public delegate void OnUp();
     public OnUp _delegate;
 
+    public static Slot[] sSlots = new Slot[5];
     public Slot[] slots;
     public GameObject objPrefab;
     [HideInInspector]
@@ -49,9 +50,36 @@ public class InventoryManager : MonoBehaviour
     public float speed;
 
     public AnimationCurve animEase;
+    public GameObject beer, dyna, shovel, lighter;
+    GameObject[] goList = new GameObject[5];
 
     private void Start()
     {
+        if (inventoryData.beer)
+        {
+            AddObjectWithObj(beer);
+        }
+        if (inventoryData.dynas)
+        {
+            AddObjectWithObj(dyna);
+            AddObjectWithObj(dyna);
+        }
+        if (inventoryData.shovel)
+        {
+            AddObjectWithObj(shovel);
+        }
+        if (inventoryData.lighter)
+        {
+            AddObjectWithObj(lighter);
+        }
+        for (int i = 0; i < 5; i++)
+        {
+            if (InventoryManager.instance.goList[i] != null)
+                Debug.Log(InventoryManager.instance.goList[i].name);
+        }
+        
+        
+
         invUp = Vector2.right; //(0, 1)
         invDown = Vector2.one; //(1, 1)
         invGo.GetComponent<RectTransform>().pivot = invDown;
@@ -79,6 +107,18 @@ public class InventoryManager : MonoBehaviour
         {
             if (slots[i].objectIn == null)
             {
+                if (objGo.GetComponent<UIObject>().type == ObjectType.BEER)
+                    inventoryData.beer = true;
+
+                else if (objGo.GetComponent<UIObject>().type == ObjectType.DYNAMITE)
+                    inventoryData.dynas = true;
+
+                else if(objGo.GetComponent<UIObject>().type == ObjectType.SHOVEL)
+                    inventoryData.shovel = true;
+
+                else if(objGo.GetComponent<UIObject>().type == ObjectType.ZIPPER)
+                    inventoryData.lighter = true;
+
                 obj.transform.parent = slots[i].transform;
                 slots[i].SetObjToSlot();
                 break;

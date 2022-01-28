@@ -36,7 +36,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 445072467832832
-    m_Localized: "Un plaisir de te revoir Jack \u2026 Je vois que tu n\u2019as pas
+    m_Localized: "Un plaisir de te revoir Harry \u2026 Je vois que tu n\u2019as pas
       perdu ton humour"
     m_Metadata:
       m_Items: []
@@ -60,8 +60,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 446304880177152
-    m_Localized: "Arr\xEAte ton chariot.. (long blanc) Bon si t\u2019en veux pas
-      je la laisse ici !"
+    m_Localized: "Arr\xEAte ton chariot... Bon si t\u2019en veux pas je la laisse
+      ici !"
     m_Metadata:
       m_Items: []
   - m_Id: 447066058272768
@@ -92,15 +92,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 816613357531136
-    m_Localized: "coucou mon chou, \xE7a sera quoi pour toi ?\r"
+    m_Localized: "Coucou mon chou, que me vaut l'honneur de votre visite?\r"
     m_Metadata:
       m_Items: []
   - m_Id: 816908913356800
-    m_Localized: juste un doigt
+    m_Localized: "Bonjour, je suis la \xE0 la recherche d\u2019information "
     m_Metadata:
       m_Items: []
   - m_Id: 817045224042496
-    m_Localized: "Tu veux pas un whiskey d\u2019abord ?"
+    m_Localized: "Mais quel genre d\u2019information ?"
     m_Metadata:
       m_Items: []
   - m_Id: 817721631059968
@@ -118,26 +118,21 @@ MonoBehaviour:
       plus d\u2019une fois !"
     m_Metadata:
       m_Items: []
-  - m_Id: 818235798204416
-    m_Localized: "Les vices des jeux d\u2019argent... \xE7a me d\xE9passe !\r\nMais..mon
-      grand-p\xE8re n\u2019est pas un oiseau..."
+  - m_Id: 1252654117625856
+    m_Localized: Tant que je ne risque pas ma vie.
     m_Metadata:
       m_Items: []
-  - m_Id: 818614065704960
-    m_Localized: "Certes, mais pour moi c\u2019est une mine d\u2019or, avec tous
-      ces joueurs path\xE9tiques ! \r\nMa parole tu es aussi moche que con ! Enl\xE8ve 
-      tes doigts de la table tu vas la salir..."
+  - m_Id: 1252470713294848
+    m_Localized: "Mon grand p\xE8re \xE0 fait tomber son testament dans un trou\r"
     m_Metadata:
       m_Items: []
-  - m_Id: 818736333860864
-    m_Localized: 'Vicieux !
-
-      Pardon...'
+  - m_Id: 1252391591944192
+    m_Localized: "Je suis \xE0 la recherche d\u2019un tr\xE9sor familial\r..."
     m_Metadata:
       m_Items: []
   - m_Id: 819005935333376
-    m_Localized: "Dites, est-ce que vous pouvez m\u2019aider quelque chose... je
-      ne sais pas si je peux le dire dans ce bar..."
+    m_Localized: "Dites, est-ce que vous pouvez m\u2019aider pour quelque chose...
+      je ne sais pas si je peux le dire dans ce bar..."
     m_Metadata:
       m_Items: []
   - m_Id: 819335783788544
@@ -154,7 +149,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 819811073929216
-    m_Localized: Merci !
+    m_Localized: Ca marche!
     m_Metadata:
       m_Items: []
   - m_Id: 821252979175424
@@ -167,9 +162,8 @@ MonoBehaviour:
       venue.\r\nDis-moi que viens tu faire par ici ?\r"
     m_Metadata:
       m_Items: []
-  - m_Id: 822621748342784
-    m_Localized: "Je suis \xE0 la recherche d\u2019un tr\xE9sors familial\r...\nMon
-      grand p\xE8re \xE0 fait tomber son testament dans un trou\r"
+  - m_Id: 1252698807934976
+    m_Localized: "C\u2019est comme si c'\xE9tait fait "
     m_Metadata:
       m_Items: []
   - m_Id: 823002809249792
@@ -186,11 +180,6 @@ MonoBehaviour:
       va falloir que tu r\xE9pondes \xE0 une de nos faveurs."
     m_Metadata:
       m_Items: []
-  - m_Id: 823691618824192
-    m_Localized: "Tant que je ne risque pas ma vie.\nSi cette faveur peut \xEAtre
-      un deuxi\xE8me calumet de la paix, j\u2019accepte."
-    m_Metadata:
-      m_Items: []
   - m_Id: 824215093129216
     m_Localized: Bien le bonjour...
     m_Metadata:
@@ -205,8 +194,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 824842128994304
-    m_Localized: "Vous \xEAtes l\u2019homme que je cherche\r\nVous \xEAtes surtout
-      d\xE9fonc\xE9 / Vous avez surtout trop profit\xE9 des vertus du calumet"
+    m_Localized: "Vous avez surtout trop profit\xE9 des vertus du calumet"
     m_Metadata:
       m_Items: []
   - m_Id: 825327934255104
@@ -222,10 +210,8 @@ MonoBehaviour:
       \xEAtes le petit fils du vieux Joe."
     m_Metadata:
       m_Items: []
-  - m_Id: 825926511767552
-    m_Localized: 'Exactement
-
-      mouais'
+  - m_Id: 1260997494251520
+    m_Localized: Vite...
     m_Metadata:
       m_Items: []
   - m_Id: 826170653814784
@@ -274,8 +260,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 829776073338880
-    m_Localized: "Bien s\xFBr ! Tenez cher monsieur, buvez c\u2019est de l\u2019eau
-      de vie !"
+    m_Localized: "Bien s\xFBr ! Tenez cher monsieur, buvez c\u2019est de l\u2019eau!"
     m_Metadata:
       m_Items: []
   - m_Id: 831949817524224
@@ -300,17 +285,16 @@ MonoBehaviour:
     m_Localized: "Eh, mais t\u2019es le petit p\xE9teux de ce vieux Joe !"
     m_Metadata:
       m_Items: []
-  - m_Id: 832672437383168
-    m_Localized: "Oui !\r\nArr\xEAtez de m'appeler comme \xE7a !\r"
+  - m_Id: 1264283907596288
+    m_Localized: "Mais je suis juste venu chercher le tr\xE9sor de mon grand-p\xE8re\u2026\r\n"
     m_Metadata:
       m_Items: []
-  - m_Id: 833363419607040
-    m_Localized: "C\u2019est l\u2019oeil qui dit merde \xE0 l\u2019autre qui m\u2019est
-      famili\xE9.\r\nJe fais ce que je veux ! \r"
+  - m_Id: 1264190492057600
+    m_Localized: Reculez ! Ou je tire !
     m_Metadata:
       m_Items: []
-  - m_Id: 833364048752640
-    m_Localized: "Pas cool...\nMe tapez pas s\u2019il vous pla\xEEt !\r"
+  - m_Id: 1261586642968576
+    m_Localized: "\rMe tapez pas s\u2019il vous pla\xEEt !\r"
     m_Metadata:
       m_Items: []
   - m_Id: 833717104291840
@@ -327,6 +311,236 @@ MonoBehaviour:
       tr\xE9sor, malheureusement il ne m'a jamais dit o\xF9... mais si tu veux la
       derni\xE8re que j\u2019ai entendu parler de lui c\u2019\xE9tait dans la vieille
       cabane de trappeur dans la for\xEAt ! Tu devrais y faire un tour !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1240834648645632
+    m_Localized: "Je ne connais pas du tout l\u2019endroit, tout genre d'information
+      me servirait."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1241320672010240
+    m_Localized: 'Les indiens ?
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1241323893235712
+    m_Localized: Et le mineur vous le connaissez?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1241326648893440
+    m_Localized: "J\u2019ai pr\xE9vu de visiter les lieux, je pourrais peut-\xEAtre
+      le croiser."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1241336039940096
+    m_Localized: "Je n\u2019y manquerais pas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1241319086563328
+    m_Localized: "Je connais peu le coin, je reste souvent au saloon. Mais je connais
+      les grandes t\xEAtes des environs. Ils sont tous venus un jour ou l\u2019autre
+      ici, m\xEAme les indiens sont pass\xE9s. Mais celui qui vient le plus ici,
+      c\u2019est le mineur."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1241322781745152
+    m_Localized: "Oui leur chef vient de temps en temps pour r\xE9gler des probl\xE8mes.
+      mais il n\u2019est pas tr\xE8s bavard."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1241325369630720
+    m_Localized: "C\u2019est mon plus gros client, il vient de temps en temps prendre
+      une bi\xE8re, fini par rouler sous la table et venir me voir quand il a repris
+      conscience. Tiens j\u2019ai encore son briquet, il faudrait que je lui rende
+      un jour."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1241328389529600
+    m_Localized: "Tu pourrais lui donner \xE0 ma place, je ne risque pas de le croiser
+      de si t\xF4t."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1246587891556352
+    m_Localized: stop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1250439248289792
+    m_Localized: "Les vices des jeux d\u2019argent... \xE7a me d\xE9passe !\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1250674787819520
+    m_Localized: "Mais..mon grand-p\xE8re n\u2019est pas un oiseau..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1250707713105920
+    m_Localized: "Certes, mais pour moi c\u2019est une mine d\u2019or, avec tous
+      ces joueurs path\xE9tiques ! \r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1250930401288192
+    m_Localized: "Ma parole tu es aussi moche que con ! Enl\xE8ve  tes doigts de
+      la table tu vas la salir..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1250973350961152
+    m_Localized: Vicieux !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1251020960505856
+    m_Localized: Pardon...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1264306149990400
+    m_Localized: Celui du Vieux Joe ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1261554183249920
+    m_Localized: 'Je fais ce que je veux ! '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1261530967777280
+    m_Localized: Pas cool...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1261333000822784
+    m_Localized: "Arr\xEAtez de m'appeler comme \xE7a !\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1261466102865920
+    m_Localized: "C\u2019est l\u2019oeil qui dit merde \xE0 l\u2019autre qui m\u2019est
+      famili\xE9.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1261266462384128
+    m_Localized: "Oui !\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1252827422072832
+    m_Localized: "Si cette faveur peut \xEAtre un deuxi\xE8me calumet de la paix,
+      j\u2019accepte"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1252867116965888
+    m_Localized: "C\u2019est sur mon chemin\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1265662860533760
+    m_Localized: "Tu es tellement na\xEFf, tu pensais vraiment que \xE7a allait \xEAtre
+      si facile de r\xE9cup\xE9rer cette fortune colossale !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1265587304341504
+    m_Localized: "Esp\xE8ce d\u2019enfoir\xE9 tu crois pouvoir me prendre mon d\xFB
+      comme \xE7a ?!\r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1264408998518784
+    m_Localized: Colle-lui une balle entre les deux yeux gamin !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1264381722959872
+    m_Localized: "Oh mon dieu\u2026Il faut que j\u2019aille retrouver cette enfoir\xE9
+      !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1264335212322816
+    m_Localized: "Oui, lui-m\xEAme !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1264365675552768
+    m_Localized: "Mon gar\xE7on, tu arrives trop tard, un \xE9tranger v\xEAtu d\u2019un
+      chapeau et d\u2019un poncho me le r\xE9cup\xE8re par la force !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1255834633183232
+    m_Localized: Exactement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1255838756184064
+    m_Localized: Mouais
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256024442216448
+    m_Localized: "Je suis sur les traces d\u2019un tr\xE9sors qu\u2019il a laiss\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256034240110592
+    m_Localized: Juste une alors.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256036387594240
+    m_Localized: "Non malheureusement\u2026 "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256038505717760
+    m_Localized: "Vous m\u2019avancez pas beaucoup"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256039675928576
+    m_Localized: Je vois ca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256054808977408
+    m_Localized: "Tu es pas cens\xE9 tout savoir ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256056558002176
+    m_Localized: Qu'est ce qui ne faut pas faire...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256058101506048
+    m_Localized: Un dragon !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256059942805504
+    m_Localized: WOOOOOOOAAAAHHHH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256060915884032
+    m_Localized: Je vous remercie.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1265683194519552
+    m_Localized: "Bah\u2026oui\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1265705470468096
+    m_Localized: Que nenni mon ami !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1265837410689024
+    m_Localized: "Si c\u2019est comme \xE7a je te provoque en duel !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1309948557729792
+    m_Localized: "Vous voyez le pont \xE0 l'est du village ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1310460346703872
+    m_Localized: Bien sur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1310514268676096
+    m_Localized: Je vous donnerais deux dynamite, une pour votre tresors et une pour
+      ce pont.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1310585940942848
+    m_Localized: "Nous avons un accord, tenez ! Ma part du march\xE9 est faite, a
+      vous de faire la votre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1310619965136896
+    m_Localized: Un plaisir de faire affaire avec vous
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1314756085751808
+    m_Localized: "Mes pouvoirs ont leurs myst\xE8res"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1315132763611136
+    m_Localized: "Allez voir le chef, il a des choses \xE0 vous dires"
     m_Metadata:
       m_Items: []
   references:
